@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.swpuiot.medias"
           xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.BROADCAST_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -19,6 +22,7 @@
         </activity>
         <activity android:name=".view.MessageActivity">
         </activity>
+        <receiver android:name=".data.MessageReceiver"/>
     </application>
 
 </manifest>
