@@ -3,13 +3,16 @@ package com.swpuiot.medias.view;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.swpuiot.medias.R;
 import com.swpuiot.medias.data.MessageReceiver;
-import com.swpuiot.medias.presenter.MessageHolder;
-import com.swpuiot.medias.presenter.MessagePresenter;
+import com.swpuiot.medias.presenter.messageactivitypresenter.MessageHolder;
+import com.swpuiot.medias.presenter.messageactivitypresenter.MessagePresenter;
 
 public class MessageActivity extends AppCompatActivity implements View.OnClickListener, MessageHolder.view {
     private TextView messageSender;
@@ -19,6 +22,7 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_message);
         inite();
         mPresenter.acceptMessageAddress();
@@ -33,7 +37,16 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
         mPresenter.mUnRegisterReceiver();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
     public void inite() {
+        setSupportActionBar((Toolbar) findViewById(R.id.tb_message));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         messageSender = (TextView) findViewById(R.id.tt_messagesender);
         messageConten = (TextView) findViewById(R.id.tt_messagecontent);
         mPresenter = new MessagePresenter(this);

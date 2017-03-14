@@ -1,6 +1,7 @@
-package com.swpuiot.medias.presenter;
+package com.swpuiot.medias.presenter.mainactivitypresenter;
 
 import android.content.Context;
+import android.content.Intent;
 
 /**
  * Created by 羊荣毅_L on 2017/3/13.
@@ -27,7 +28,9 @@ public class MainPresenter implements MainHolder.presenter {
     }
 
     @Override
-    public void startActivity() {
-     mView.startMessageActivity();
+    public void startActivity(Intent intent) {
+        mView.mStartActivity(intent);
     }
+
+
 }

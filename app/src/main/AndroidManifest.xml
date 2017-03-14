@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.swpuiot.medias"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.swpuiot.medias"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.BROADCAST_SMS"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
@@ -22,7 +24,12 @@
         </activity>
         <activity android:name=".view.MessageActivity">
         </activity>
+
         <receiver android:name=".data.MessageReceiver"/>
+
+        <activity android:name=".view.BeatBoxActivity" android:theme="@style/BeatBoxTheme">
+
+        </activity>
     </application>
 
 </manifest>

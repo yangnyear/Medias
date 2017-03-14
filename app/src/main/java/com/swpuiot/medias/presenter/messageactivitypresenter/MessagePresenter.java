@@ -1,4 +1,4 @@
-package com.swpuiot.medias.presenter;
+package com.swpuiot.medias.presenter.messageactivitypresenter;
 
 import android.content.Context;
 import android.content.IntentFilter;

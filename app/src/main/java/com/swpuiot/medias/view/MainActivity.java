@@ -14,8 +14,8 @@ import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.swpuiot.medias.R;
-import com.swpuiot.medias.presenter.MainHolder;
-import com.swpuiot.medias.presenter.MainPresenter;
+import com.swpuiot.medias.presenter.mainactivitypresenter.MainHolder;
+import com.swpuiot.medias.presenter.mainactivitypresenter.MainPresenter;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, MainHolder.view {
     private MainHolder.presenter mPresenter;
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button noticeButton;
     private Button myNotificationButton;
     private Button messageButton;
+    private Button beatBoxButton;
 
     private NotificationManager mNotificationManager;
     private Notification mNotification;
@@ -33,9 +34,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         inite();
+        //监听按钮点击事件
         noticeButton.setOnClickListener(this);
         myNotificationButton.setOnClickListener(this);
         messageButton.setOnClickListener(this);
+        beatBoxButton.setOnClickListener(this);
     }
 
     public void inite() {
@@ -46,12 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         noticeButton = (Button) findViewById(R.id.bt_notice);
         myNotificationButton = (Button) findViewById(R.id.bt_mynotification);
         messageButton = (Button) findViewById(R.id.bt_sendmessage);
+        beatBoxButton= (Button) findViewById(R.id.bt_beatbox);
 
         mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()) {
             case R.id.bt_notice:
                 mPresenter.sendNotice();
@@ -60,7 +65,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mPresenter.sendMyNotice();
                 break;
             case R.id.bt_sendmessage:
-                mPresenter.startActivity();
+               intent = new Intent(MainActivity.this, MessageActivity.class);
+                mPresenter.startActivity(intent);
+                break;
+            case R.id.bt_beatbox:
+                intent=new Intent(MainActivity.this,BeatBoxActivity.class);
+                mPresenter.startActivity(intent);
         }
     }
 
@@ -97,8 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void startMessageActivity() {
-        Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+    public void mStartActivity(Intent intent) {
         startActivity(intent);
     }
+
 }
