@@ -11,5 +11,6 @@ public interface BeatBoxHolder {
     }
     interface presenter{
         void setRecycViewAdapter();
+        void releaseSoundPool();
     }
 }

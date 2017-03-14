@@ -27,6 +27,12 @@ public class BeatBoxActivity extends AppCompatActivity implements BeatBoxHolder.
         mPresenter.setRecycViewAdapter();
     }
 
+    @Override
+    protected void onDestroy() {
+        mPresenter.releaseSoundPool();
+        super.onDestroy();
+    }
+
     public void inite() {
         setSupportActionBar((Toolbar) findViewById(R.id.tb_beatbox));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

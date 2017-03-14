@@ -6,6 +6,15 @@ package com.swpuiot.medias.entities;
 public class Sound {
     private String soundPath;
     private String soundName;
+    private Integer mSoundId;
+
+    public Integer getSoundId() {
+        return mSoundId;
+    }
+
+    public void setSoundId(Integer soundId) {
+        mSoundId = soundId;
+    }
 
     public Sound(String soundPath) {
         this.soundPath = soundPath;
