@@ -56,5 +56,14 @@
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="20sp"/>
+    <Button
+        android:id="@+id/bt_draganddraw"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonshape"
+        android:text="自定义view"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
 
 </LinearLayout>
