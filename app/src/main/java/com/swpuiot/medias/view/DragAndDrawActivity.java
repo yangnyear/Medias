@@ -2,13 +2,13 @@ package com.swpuiot.medias.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Window;
 
 import com.swpuiot.medias.R;
 import com.swpuiot.medias.presenter.draganddrawactivitypresenter.DragAndDrawHolder;
 
 public class DragAndDrawActivity extends AppCompatActivity implements DragAndDrawHolder.view {
+    private BoxDrawingView mBoxDrawingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,8 @@ public class DragAndDrawActivity extends AppCompatActivity implements DragAndDra
         inite();
     }
     public void inite() {
-        setSupportActionBar((Toolbar) findViewById(R.id.tb_draganddraw));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        setSupportActionBar((Toolbar) findViewById(R.id.tb_draganddraw));
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        mBoxDrawingView= (BoxDrawingView) findViewById(R.id.topbar_text);
     }
 }
