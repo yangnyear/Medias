@@ -26,5 +26,77 @@
         custem:rightText="保存"
         custem:rightTextColor="#fff">
     </com.swpuiot.medias.view.BoxDrawingView>
+    <com.swpuiot.medias.view.HorizontalScrollViewEX
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:padding="20dp"
+        android:background="#74f708">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+          android:gravity="center"
+            android:background="#ff0808"
+            android:textColor="#fff"
+            android:text="放在自定义layout里面的BTextView1"/>
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_launcher"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#ff0808"
+            android:textColor="#fff"
+            android:text="放在自定义layout里面的BTextView2"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_launcher"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#ff0808"
+            android:textColor="#fff"
+            android:text="放在自定义layout里面的BTextView3"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_launcher"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#ff0808"
+            android:textColor="#fff"
+            android:text="放在自定义layout里面的BTextView4"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_launcher"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#ff0808"
+            android:textColor="#fff"
+            android:text="放在自定义layout里面的BTextView5"/>
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_launcher"/>-->
+
+    </com.swpuiot.medias.view.HorizontalScrollViewEX>
 
 </LinearLayout>
