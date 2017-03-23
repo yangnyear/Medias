@@ -1,4 +1,4 @@
-package com.swpuiot.medias.view;
+package com.swpuiot.medias.view.myview;
 
 import android.content.Context;
 import android.util.AttributeSet;

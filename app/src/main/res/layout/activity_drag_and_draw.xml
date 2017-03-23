@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.swpuiot.medias.view.DragAndDrawActivity">
+    tools:context=".view.activity.DragAndDrawActivity">
     <!--<android.support.v7.widget.Toolbar-->
     <!--android:id="@+id/tb_draganddraw"-->
     <!--android:layout_width="match_parent"-->
@@ -15,7 +15,7 @@
     <!--android:fitsSystemWindows="true"-->
     <!--app:theme="@android:style/ThemeOverlay.Material.Dark"-->
     <!--app:title="自定义view"/>-->
-    <com.swpuiot.medias.view.BoxDrawingView
+    <com.swpuiot.medias.view.myview.BoxDrawingView
         android:id="@+id/topbar_text"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -25,8 +25,8 @@
         custem:rightBackground="#f5fd05"
         custem:rightText="保存"
         custem:rightTextColor="#fff">
-    </com.swpuiot.medias.view.BoxDrawingView>
-    <com.swpuiot.medias.view.HorizontalScrollViewEX
+    </com.swpuiot.medias.view.myview.BoxDrawingView>
+    <com.swpuiot.medias.view.myview.HorizontalScrollViewEX
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:padding="20dp"
@@ -97,6 +97,6 @@
             <!--android:layout_height="wrap_content"-->
             <!--android:src="@drawable/ic_launcher"/>-->
 
-    </com.swpuiot.medias.view.HorizontalScrollViewEX>
+    </com.swpuiot.medias.view.myview.HorizontalScrollViewEX>
 
 </LinearLayout>

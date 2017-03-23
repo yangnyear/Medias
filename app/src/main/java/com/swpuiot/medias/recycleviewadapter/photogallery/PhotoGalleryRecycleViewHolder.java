@@ -1,24 +1,23 @@
-package com.swpuiot.medias.recycleviewadapter;
+package com.swpuiot.medias.recycleviewadapter.photogallery;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
 import com.swpuiot.medias.R;
 import com.swpuiot.medias.clicklistener.MyItemClickListener;
 import com.swpuiot.medias.clicklistener.MyItemLongClickListener;
 
 /**
- * Created by 羊荣毅_L on 2017/3/14.
+ * Created by 羊荣毅_L on 2017/3/23.
  */
-public class RecycleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
-    public Button mSoundName;
+public class PhotoGalleryRecycleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
+    public ImageView mImageView;
     public MyItemClickListener mClickListener;
     public MyItemLongClickListener mLongClickListener;
-
-    public RecycleViewHolder(View itemView,MyItemClickListener mClickListener, MyItemLongClickListener mLongClickListener) {
+    public PhotoGalleryRecycleViewHolder(View itemView, MyItemClickListener mClickListener, MyItemLongClickListener mLongClickListener) {
         super(itemView);
-        mSoundName= (Button) itemView.findViewById(R.id.bt_sound);
+        mImageView= (ImageView) itemView.findViewById(R.id.im_photorecycleview);
         this.mClickListener = mClickListener;
         this.mLongClickListener = mLongClickListener;
         itemView.setOnClickListener(this);
@@ -30,7 +29,6 @@ public class RecycleViewHolder extends RecyclerView.ViewHolder implements View.O
         if (itemView!=null){
             mClickListener.onItemClick(v, getPosition());
         }
-
     }
 
     @Override

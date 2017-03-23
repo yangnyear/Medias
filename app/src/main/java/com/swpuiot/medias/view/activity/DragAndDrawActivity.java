@@ -1,4 +1,4 @@
-package com.swpuiot.medias.view;
+package com.swpuiot.medias.view.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.view.Window;
 
 import com.swpuiot.medias.R;
 import com.swpuiot.medias.presenter.draganddrawactivitypresenter.DragAndDrawHolder;
+import com.swpuiot.medias.view.myview.BoxDrawingView;
 
 public class DragAndDrawActivity extends AppCompatActivity implements DragAndDrawHolder.view {
     private BoxDrawingView mBoxDrawingView;

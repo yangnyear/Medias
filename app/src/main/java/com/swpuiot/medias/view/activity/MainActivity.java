@@ -1,4 +1,4 @@
-package com.swpuiot.medias.view;
+package com.swpuiot.medias.view.activity;
 
 import android.app.Notification;
 import android.app.NotificationManager;

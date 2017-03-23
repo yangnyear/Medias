@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.swpuiot.medias.view.BeatBoxActivity">
+    tools:context=".view.activity.BeatBoxActivity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/ab_maintoolmar"
         android:layout_width="wrap_content"

@@ -8,7 +8,7 @@ import com.swpuiot.medias.clicklistener.MyItemClickListener;
 import com.swpuiot.medias.clicklistener.MyItemLongClickListener;
 import com.swpuiot.medias.data.Resource;
 import com.swpuiot.medias.entities.Sound;
-import com.swpuiot.medias.recycleviewadapter.RecycleViewAdapter;
+import com.swpuiot.medias.recycleviewadapter.beatbox.BeatBoxRecycleViewAdapter;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class BeatBoxPresenter implements BeatBoxHolder.presenter,MyItemLongClick
     }
     @Override
     public void setRecycViewAdapter() {
-        RecycleViewAdapter adapter=new RecycleViewAdapter(mContext,mRecycleViewListEntities);
+        BeatBoxRecycleViewAdapter adapter=new BeatBoxRecycleViewAdapter(mContext,mRecycleViewListEntities);
         mView.setRecycViewAdapter(adapter);
         adapter.setClickListener(this);
         adapter.setLongClickListener(this);

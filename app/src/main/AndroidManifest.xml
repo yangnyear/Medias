@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.BROADCAST_SMS"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.activity.MainActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,18 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".view.MessageActivity">
+        <activity android:name=".view.activity.MessageActivity">
         </activity>
 
         <receiver android:name=".data.MessageReceiver"/>
 
         <activity
-            android:name=".view.BeatBoxActivity"
+            android:name=".view.activity.BeatBoxActivity"
             android:theme="@style/BeatBoxTheme">
         </activity>
-        <activity android:name=".view.DragAndDrawActivity">
+        <activity android:name=".view.activity.DragAndDrawActivity">
         </activity>
-        <activity android:name=".view.PhotoGalleryActivity">
+        <activity android:name=".view.activity.PhotoGalleryActivity">
         </activity>
     </application>
 

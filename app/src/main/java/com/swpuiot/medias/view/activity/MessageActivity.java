@@ -1,4 +1,4 @@
-package com.swpuiot.medias.view;
+package com.swpuiot.medias.view.activity;
 
 import android.content.IntentFilter;
 import android.os.Bundle;

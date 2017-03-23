@@ -1,4 +1,4 @@
-package com.swpuiot.medias.view;
+package com.swpuiot.medias.view.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import android.view.Window;
 import com.swpuiot.medias.R;
 import com.swpuiot.medias.presenter.beatboxactivitypresenter.BeatBoxHolder;
 import com.swpuiot.medias.presenter.beatboxactivitypresenter.BeatBoxPresenter;
-import com.swpuiot.medias.recycleviewadapter.RecycleViewAdapter;
+import com.swpuiot.medias.recycleviewadapter.beatbox.BeatBoxRecycleViewAdapter;
 
 public class BeatBoxActivity extends AppCompatActivity implements BeatBoxHolder.view{
     private RecyclerView mRecyclerView;
@@ -50,7 +50,7 @@ public class BeatBoxActivity extends AppCompatActivity implements BeatBoxHolder.
     }
 
     @Override
-    public void setRecycViewAdapter(RecycleViewAdapter recycViewAdapter) {
+    public void setRecycViewAdapter(BeatBoxRecycleViewAdapter recycViewAdapter) {
         if (recycViewAdapter!=null){
             mRecyclerView.setAdapter(recycViewAdapter);
         }
