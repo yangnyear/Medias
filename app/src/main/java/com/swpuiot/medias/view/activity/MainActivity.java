@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button beatBoxButton;
     private Button dragAndDrawButton;
     private Button myAppcompatButton;
+    private Button sunAndSeaButton;
 
     private NotificationManager mNotificationManager;
     private Notification mNotification;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         beatBoxButton.setOnClickListener(this);
         dragAndDrawButton.setOnClickListener(this);
         myAppcompatButton.setOnClickListener(this);
+        sunAndSeaButton.setOnClickListener(this);
     }
 
     public void inite() {
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         beatBoxButton= (Button) findViewById(R.id.bt_beatbox);
         dragAndDrawButton= (Button) findViewById(R.id.bt_draganddraw);
         myAppcompatButton= (Button) findViewById(R.id.bt_myappcompat);
+        sunAndSeaButton= (Button) findViewById(R.id.bt_sunandsea);
 
         mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
@@ -84,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_myappcompat:
                 intent=new Intent(MainActivity.this,PhotoGalleryActivity.class);
+                mPresenter.startActivity(intent);
+                break;
+            case R.id.bt_sunandsea:
+                intent=new Intent(MainActivity.this,SunSetActivity.class);
                 mPresenter.startActivity(intent);
         }
     }

@@ -76,6 +76,16 @@
         android:text="AppCompat"
         android:textColor="#fff"
         android:textSize="20sp"/>
+    <Button
+        android:id="@+id/bt_sunandsea"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:background="@drawable/buttonshape"
+        android:text="SunAndSea"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
 
 
 </LinearLayout>
