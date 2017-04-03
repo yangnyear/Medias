@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 /**
  * Created by 羊荣毅_L on 2017/3/14.
+ * BeatBoxRecycleViewAdapter
  */
 public class BeatBoxRecycleViewAdapter extends RecyclerView.Adapter<BeatBoxRecycleViewHolder> {
     private Context mContext;

@@ -21,16 +21,17 @@ public class BeatBoxPresenter implements BeatBoxHolder.presenter,MyItemLongClick
     private BeatBoxHolder.view mView;
     private Resource mResource;
     private ArrayList<Sound> mRecycleViewListEntities;
+    private BeatBoxRecycleViewAdapter adapter;
 
     public BeatBoxPresenter(Context context) {
         mContext = context;
         this.mView= (BeatBoxHolder.view) context;
         mResource=new Resource(mContext);
         mRecycleViewListEntities= mResource.getRecycleViewListEntities();
+        adapter=new BeatBoxRecycleViewAdapter(mContext,mRecycleViewListEntities);
     }
     @Override
     public void setRecycViewAdapter() {
-        BeatBoxRecycleViewAdapter adapter=new BeatBoxRecycleViewAdapter(mContext,mRecycleViewListEntities);
         mView.setRecycViewAdapter(adapter);
         adapter.setClickListener(this);
         adapter.setLongClickListener(this);
